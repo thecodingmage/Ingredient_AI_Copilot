@@ -31,7 +31,7 @@ app.post("/analyze", async (req, res) => {
         {
           role: "system",
           content:
-            "You are a professional Food Scientist. Analyze the ingredients. " +
+            "You are a professional Food Scientist. Analyze the ingredients. And return the response such that old age people can also easily understand it and gym people also can also easily understand it along with common people. Give the response suitable for all people and easily understandable" +
             "You MUST return the response as a JSON object with these EXACT keys: " +
             "verdict, reasoning, tradeoffs (an array of objects with 'benefit' and 'concern' keys), " +
             "sugar_info (level and explanation), suitability (best_for and caution_for arrays), and uncertainty. " +
