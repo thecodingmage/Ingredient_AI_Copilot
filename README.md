@@ -45,28 +45,22 @@ No filters, forms, or configuration steps are required.
 ### Home Screen and Ingredient Capture
 
 <p align="center">
-  <img src="screenshots/home.jpeg" width="40%" alt="Home Screen" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="screenshots/capture.jpeg" width="40%" alt="Ingredient Capture" />
+  <img src="screenshots/home.jpeg" style="width:45%; max-width:360px; height:auto; display:inline-block; margin:8px;" alt="Home Screen" />
+  <img src="screenshots/capture.jpeg" style="width:45%; max-width:360px; height:auto; display:inline-block; margin:8px;" alt="Ingredient Capture" />
 </p>
 
-<p align="center">
-  <em>Camera-first entry point and ingredient label capture workflow.</em>
-</p>
+<p align="center"><em>Camera-first entry point and ingredient label capture workflow.</em></p>
 
 ---
 
 ### AI Analysis and Explainability
 
 <p align="center">
-  <img src="screenshots/result.jpeg" width="40%" alt="AI Analysis Result" />
-  &nbsp;&nbsp;&nbsp;
-  <img src="screenshots/explainability.jpeg" width="40%" alt="Explainability and Trade-offs" />
+  <img src="screenshots/result.jpeg" style="width:45%; max-width:360px; height:auto; display:inline-block; margin:8px;" alt="AI Analysis Result" />
+  <img src="screenshots/explainability.jpeg" style="width:45%; max-width:360px; height:auto; display:inline-block; margin:8px;" alt="Explainability and Trade-offs" />
 </p>
 
-<p align="center">
-  <em>Structured verdict, suitability guidance, and clear explanation of trade-offs.</em>
-</p>
+<p align="center"><em>Structured verdict, suitability guidance, and clear explanation of trade-offs.</em></p>
 
 
 ---
