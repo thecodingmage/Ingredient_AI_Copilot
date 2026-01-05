@@ -6,21 +6,14 @@ The project was developed as part of a hackathon focused on AI-native interactio
 
 ---
 
-## Tech Stack
-
 <p align="left">
-  <img src="https://img.shields.io/badge/Mobile-React%20Native-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
-  <img src="https://img.shields.io/badge/Framework-Expo-000020?style=for-the-badge&logo=expo&logoColor=white" />
-  <img src="https://img.shields.io/badge/Backend-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/API-Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/React%20Native-Mobile%20App-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/Expo-Framework-000020?style=for-the-badge&logo=expo&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-Backend-339933?style=for-the-badge&logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express.js-API-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/Multimodal%20LLM-Groq-FF4F00?style=for-the-badge" />
 </p>
 
-<p align="left">
-  <img src="https://img.shields.io/badge/AI-Multimodal%20LLM-7B3FE4?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Inference-Groq-FF4F00?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Validation-Zod-3E67B1?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Language-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-</p>
 
 
 ---
