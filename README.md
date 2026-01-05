@@ -42,25 +42,32 @@ No filters, forms, or configuration steps are required.
 
 ## Screenshots
 
-### Home Screen
-Camera-first entry point with a single primary action.
+### Home Screen and Ingredient Capture
 
-![Home Screen](screenshots/home.jpeg)
+<p align="center">
+  <img src="screenshots/home.jpeg" width="40%" alt="Home Screen" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="screenshots/capture.jpeg" width="40%" alt="Ingredient Capture" />
+</p>
 
-### Ingredient Capture
-Scanning or selecting an image of a packaged beverage ingredient label.
+<p align="center">
+  <em>Camera-first entry point and ingredient label capture workflow.</em>
+</p>
 
-![Ingredient Capture](screenshots/capture.jpeg)
+---
 
-### AI Analysis Result
-Structured verdict with explanation, suitability guidance, and confidence score.
+### AI Analysis and Explainability
 
-![Analysis Result](screenshots/result.jpeg)
+<p align="center">
+  <img src="screenshots/result.jpeg" width="40%" alt="AI Analysis Result" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="screenshots/explainability.jpeg" width="40%" alt="Explainability and Trade-offs" />
+</p>
 
-### Explainability and Trade-offs
-Clear presentation of key trade-offs and nutritional concerns.
+<p align="center">
+  <em>Structured verdict, suitability guidance, and clear explanation of trade-offs.</em>
+</p>
 
-![Explainability](screenshots/explainability.jpeg)
 
 ---
 
