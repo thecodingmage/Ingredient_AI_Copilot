@@ -7,13 +7,12 @@ The project was developed as part of a hackathon focused on AI-native interactio
 ---
 
 <p align="left">
-  <img src="https://img.shields.io/badge/React%20Native-Mobile%20App-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/React%20Native-Mobile-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
   <img src="https://img.shields.io/badge/Expo-Framework-000020?style=for-the-badge&logo=expo&logoColor=white" />
   <img src="https://img.shields.io/badge/Node.js-Backend-339933?style=for-the-badge&logo=node.js&logoColor=white" />
   <img src="https://img.shields.io/badge/Express.js-API-000000?style=for-the-badge&logo=express&logoColor=white" />
-  <img src="https://img.shields.io/badge/Multimodal%20LLM-Groq-FF4F00?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Groq-Multimodal%20LLM-FF4F00?style=for-the-badge" />
 </p>
-
 
 
 ---
