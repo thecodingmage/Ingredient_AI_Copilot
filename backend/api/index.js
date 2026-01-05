@@ -13,7 +13,9 @@ const groq = new OpenAI({
   apiKey: process.env.GROQ_API_KEY,
   baseURL: "https://api.groq.com/openai/v1",
 });
-
+app.get("/", (req, res) => {
+  res.send("Groq Backend is Live!");
+});
 app.post("/api/analyze", async (req, res) => {
   const { base64Image } = req.body;
   if (!base64Image) return res.status(400).json({ error: "No image" });
