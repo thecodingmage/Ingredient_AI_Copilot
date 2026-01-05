@@ -1,201 +1,215 @@
-Ingredient AI Copilot
+```md
+# Ingredient AI Copilot 
 
-Ingredient AI Copilot is a camera-first mobile application designed to help users interpret food ingredient lists at the moment of decision. The system uses artificial intelligence as a reasoning co-pilot, transforming complex nutritional information into concise, explainable insights with minimal user interaction.
+Ingredient AI Copilot is a camera-first mobile application that helps users interpret food ingredient lists at the moment of decision. The system uses artificial intelligence as a reasoning co-pilot, transforming complex nutritional information into concise, explainable insights with minimal user interaction.
 
-Overview
+The project was developed as part of a hackathon focused on AI-native interaction, where AI acts as the primary interface rather than a supporting feature.
 
-Food packaging contains detailed nutritional and ingredient information, but interpreting it quickly remains difficult for most users. Ingredient AI Copilot addresses this gap by providing real-time, AI-driven reasoning over ingredient lists, reducing cognitive load and enabling informed decisions without requiring users to manually process raw data.
+---
 
-The application is intentionally designed as an AI-native experience, where the AI acts as the primary interface rather than a supplementary feature.
+## Overview
 
-Problem Statement
+Food packaging already contains ingredient and nutritional information, but interpreting it quickly and meaningfully remains difficult for most users. Ingredient lists are often technical, verbose, and cognitively demanding, especially at purchase or consumption time.
 
-Users are often presented with long, technical ingredient lists that are difficult to interpret during purchase or consumption. While information is technically available, it is rarely actionable at decision time. This leads to confusion, decision fatigue, or reliance on marketing claims rather than factual understanding.
+Ingredient AI Copilot addresses this gap by reasoning over ingredient information on the user’s behalf and presenting only what matters, in clear and human-readable form.
 
-The challenge is not data availability, but meaningful interpretation under time and cognitive constraints.
+---
 
-Solution Approach
+## Core Idea
 
-Ingredient AI Copilot provides a minimal, camera-first workflow:
+The core principle of this project is:
 
-The user opens the app and scans the ingredient label of a packaged beverage.
+**AI should act as the interface, not just a feature.**
 
-Ingredient text is extracted from the image.
+Instead of functioning as a database, lookup tool, or filter-based system, the application interprets ingredient information and delivers a concise verdict along with optional explanations and uncertainty.
 
-Key nutritional signals are derived using deterministic rules and heuristics.
+The goal is to reduce cognitive load while improving decision quality.
 
-These signals are passed to an LLM-based reasoning core.
+---
 
-The system returns a structured, explainable verdict including:
+## User Experience
 
-A concise health assessment
+The application follows a minimal, camera-first interaction model:
 
-Key contributing factors
+1. The user opens the app and scans the ingredient label of a packaged beverage.
+2. The app extracts ingredient text from the image.
+3. Key nutritional signals are identified.
+4. An AI reasoning core generates a structured verdict.
+5. The result is presented with a short explanation and confidence indicator.
 
-Plain-language explanations
+No filters, forms, or configuration steps are required.
 
-An explicit AI confidence indicator
+---
 
-The UI surfaces only what is necessary, with optional explanations available for deeper inspection.
+## Screenshots
 
-Application Screenshots
-
-Below are representative screenshots of the application workflow.
-
-Home Screen
-
+### Home Screen
 Camera-first entry point with a single primary action.
 
-![Home Screen](screenshots/home.png)
+![Home Screen](screenshots/home.jpeg)
 
-Ingredient Capture
+### Ingredient Capture
+Scanning or selecting an image of a packaged beverage ingredient label.
 
-User captures or selects an image of a packaged beverage ingredient label.
+![Ingredient Capture](screenshots/capture.jpeg)
 
-![Ingredient Capture](screenshots/capture.png)
-
-AI Analysis Result
-
+### AI Analysis Result
 Structured verdict with explanation, suitability guidance, and confidence score.
 
-![Analysis Result](screenshots/result.png)
+![Analysis Result](screenshots/result.jpeg)
 
-Explainability and Trade-offs
+### Explainability and Trade-offs
+Clear presentation of key trade-offs and nutritional concerns.
 
-Clear communication of key trade-offs and nutritional concerns.
+![Explainability](screenshots/explainability.jpeg)
 
-![Explainability](screenshots/explainability.png)
+---
 
-
-Note: Place screenshots inside a screenshots/ folder at the root of the repository and update filenames as needed.
-
-System Architecture
+## System Architecture
 
 At a high level, the system follows the pipeline below:
 
+```
+
 Camera Input (Mobile App)
-        ↓
+↓
 Ingredient Text Extraction
-        ↓
+↓
 Signal Extraction Layer (Rules + Heuristics)
-        ↓
+↓
 LLM Reasoning Core
-        ↓
+↓
 Structured Decision Object
-        ↓
-UI and Explainability Layer
+↓
+UI + Explainability Layer
 
-Signal Extraction Layer
+```
 
-Before invoking the language model, the system extracts meaningful signals from ingredient text to improve reliability and reduce hallucination. These signals may include:
+---
 
-Indicators of high added sugar
+## Signal Extraction Layer
 
-Presence of artificial sweeteners
+Before invoking the language model, the system extracts meaningful signals from ingredient text to improve reliability and reduce hallucination. These signals include indicators such as:
 
-Caffeine content
+- High added sugar content
+- Artificial sweeteners
+- Caffeine presence
+- Preservatives or additives
 
-Preservatives or additives
+This hybrid approach combines deterministic logic with LLM-based reasoning.
 
-Domain-specific nutritional flags
+---
 
-This hybrid approach combines deterministic logic with model-based reasoning.
-
-LLM Reasoning Core
+## LLM Reasoning Core
 
 The language model is used strictly as a reasoning engine, not as a conversational chatbot. It receives structured signals and produces a deterministic decision object containing:
 
-A clear verdict
+- A concise verdict
+- Key contributing factors
+- Human-readable explanations
+- An explicit confidence or uncertainty score
 
-Key influencing factors
+This ensures clarity, predictability, and explainability in outputs.
 
-Short, human-readable explanations
+---
 
-Explicit uncertainty or confidence reporting
+## Explainability Approach
 
-This design prioritizes reasoning clarity and predictable outputs.
+Explainability is decision-centric rather than model-centric. Instead of exposing technical model internals, the system explains:
 
-Explainability Design
+- Why certain ingredients matter
+- What trade-offs exist
+- Where uncertainty remains
 
-Explainability is decision-centric rather than model-centric. Instead of exposing technical internals, the system focuses on explaining:
+All explanations are short, optional, and written in everyday language.
 
-Why certain ingredients matter
+---
 
-What trade-offs exist
+## Scope and Limitations
 
-Where uncertainty remains
+- The current prototype focuses on packaged beverages to enable domain-aware reasoning and higher explanation quality.
+- The design is extensible to other food categories.
+- OCR quality and image clarity may affect extraction accuracy, though signal validation mitigates common issues.
 
-All explanations are concise, optional, and written in everyday language to ensure rapid comprehension.
+---
 
-Scope and Constraints
+## Evaluation Alignment
 
-The current prototype focuses on packaged beverages to enable domain-aware reasoning and higher explanation quality.
+The project aligns with the hackathon evaluation criteria:
 
-The system is designed to be extensible to other food categories in future iterations.
+- **Experience & Interaction**: Camera-first design with minimal steps
+- **Reasoning & Explainability**: Clear verdicts, explanations, and uncertainty disclosure
+- **Technical Execution**: Modular hybrid architecture combining rules and LLM reasoning
 
-OCR errors and poor image quality may affect extraction accuracy, though signal validation mitigates common issues.
+---
 
-Alignment with Evaluation Criteria
+## Repository Structure
 
-Experience & Interaction: Camera-first design with minimal user input.
+```
 
-Reasoning & Explainability: Structured decisions, transparent explanations, and uncertainty disclosure.
-
-Technical Execution: Modular hybrid architecture combining rules and LLM-based reasoning.
-
-Repository Structure
 backend/
-  ├─ index.js
-  ├─ package.json
+├─ index.js
+├─ package.json
 frontend/
-  ├─ App.js
-  ├─ app.json
-  ├─ package.json
+├─ App.js
+├─ app.json
+├─ package.json
 screenshots/
-  ├─ home.png
-  ├─ capture.png
-  ├─ result.png
-  └─ explainability.png
+├─ home.jpeg
+├─ capture.jpeg
+├─ result.jpeg
+└─ explainability.jpeg
 README.md
 
-Running the Project
-Backend
+```
 
-Navigate to the backend/ directory.
+---
 
-Install dependencies:
+## Running the Project
+
+### Backend
+1. Navigate to the `backend/` directory.
+2. Install dependencies:
+```
 
 npm install
 
-
-Configure environment variables (API keys, port).
-
-Start the server:
+```
+3. Configure required environment variables.
+4. Start the server:
+```
 
 npm start
 
-Frontend
+```
 
-Navigate to the frontend/ directory.
-
-Install dependencies:
+### Frontend
+1. Navigate to the `frontend/` directory.
+2. Install dependencies:
+```
 
 npm install
 
-
-Start the Expo development server:
+```
+3. Start the Expo development server:
+```
 
 npx expo start
 
+```
 
 Ensure the frontend is configured with the correct backend API endpoint.
 
-APK and Demo
+---
 
-A release APK was generated for demonstration purposes and installed on a physical Android device. The demo showcases the complete scan-to-verdict workflow using real product labels.
+## Demo
 
-(Optionally add a demo video link here.)
+A release APK was generated and installed on a physical Android device to demonstrate the full scan-to-verdict workflow using real product labels.
 
-Conclusion
+---
 
-Ingredient AI Copilot demonstrates how AI can act as a true co-pilot—interpreting complex ingredient information, reducing cognitive effort, and enabling better decisions at the moment they matter. The system prioritizes reasoning quality, explainability, and user experience over raw data presentation.
+## Conclusion
+
+Ingredient AI Copilot demonstrates how AI can function as a true co-pilot—interpreting complex ingredient information, reducing cognitive effort, and enabling better decisions at the moment they matter most.
+```
+
