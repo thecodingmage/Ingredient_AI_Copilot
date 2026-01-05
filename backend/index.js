@@ -8,7 +8,7 @@ const { ZodError } = require("zod");
 const app = express();
 app.use(cors());
 app.use(express.json({ limit: "25mb" })); 
-
+const PORT=process.env.PORT || 3000;
 const groq = new OpenAI({
   apiKey: process.env.GROQ_API_KEY,
   baseURL: "https://api.groq.com/openai/v1",
@@ -60,4 +60,4 @@ app.post("/analyze", async (req, res) => {
   }
 });
 
-app.listen(3000, "0.0.0.0", () => console.log(`🚀 Backend on 3000`));
+app.listen(PORT, "0.0.0.0", () => console.log(`Backend on {PORT}`));
