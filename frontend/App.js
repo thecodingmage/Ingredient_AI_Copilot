@@ -37,7 +37,7 @@ export default function App() {
   const sendToBackend = async (base64Data) => {
     setLoading(true);
     try {
-      const response = await fetch('http://10.41.68.132:3000/analyze', {
+      const response = await fetch('https://ingredient-ai-copilot.vercel.app/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ base64Image: base64Data }),
