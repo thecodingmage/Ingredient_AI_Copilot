@@ -24,7 +24,7 @@ export default function App() {
     }
     const result = await ImagePicker.launchCameraAsync({
       allowsEditing: true,
-      quality: 0.2, 
+      quality: 0.15, 
       base64: true,
     });
     if (!result.canceled) {
