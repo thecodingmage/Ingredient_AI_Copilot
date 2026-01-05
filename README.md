@@ -1,4 +1,3 @@
-```md
 # Ingredient AI Copilot 
 
 Ingredient AI Copilot is a camera-first mobile application that helps users interpret food ingredient lists at the moment of decision. The system uses artificial intelligence as a reasoning co-pilot, transforming complex nutritional information into concise, explainable insights with minimal user interaction.
@@ -211,5 +210,3 @@ A release APK was generated and installed on a physical Android device to demons
 ## Conclusion
 
 Ingredient AI Copilot demonstrates how AI can function as a true co-pilot—interpreting complex ingredient information, reducing cognitive effort, and enabling better decisions at the moment they matter most.
-```
-
