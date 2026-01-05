@@ -14,7 +14,7 @@ const groq = new OpenAI({
   baseURL: "https://api.groq.com/openai/v1",
 });
 
-app.post("/analyze", async (req, res) => {
+app.post("/api/analyze", async (req, res) => {
   const { base64Image } = req.body;
   if (!base64Image) return res.status(400).json({ error: "No image" });
 
